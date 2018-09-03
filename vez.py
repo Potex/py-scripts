@@ -35,7 +35,7 @@ sockS = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
 
 ser=serial.Serial("/dev/ttyACM0", 115200)
 
-Feedbackread = ""
+feedbackRead = ''
 
 #time.sleep(6)
 #ser.flushInput()  
@@ -44,7 +44,7 @@ Feedbackread = ""
 ##servoPosStr ='1.00'
 
 def motorControl():
-    global exitFlag, idMotDrive, idMotSteering, motSpeedDrive, motPosDrive, motPosSteering, motSetSpeedSigRefDrive, motLoadDrive
+    global exitFlag, motSetAngRefSteering, motSetSpeedSigRefDrive,
     while not exitFlag:
         ser.flushInput()
         messageList = [motSetSpeedSigRefDrive, motSetAngRefSteering]
@@ -65,7 +65,7 @@ def feedbackInfo():
     print(" >> feedbackInfo thread stopped.")    
 
 def sendMsg():
-    global exitFlag, sendDelay, sendDict, idMotSteering, idMotDrive, motSpeedDrive, feedbackRead
+    global exitFlag, sendDelay, sendDict, feedbackRead
     startTime = time.time()
     #print(" >> Write message thread started.")
     while not exitFlag:
