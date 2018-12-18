@@ -1,0 +1,9 @@
+[Unit]
+Description=Jetson clocking and cooling
+After=display-manager.service
+
+[Service]
+ExecStart=/home/nvidia/jetson_clocks.sh
+
+[Install]
+WantedBy=default.target

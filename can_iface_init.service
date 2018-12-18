@@ -1,0 +1,9 @@
+[Unit]
+Description=Can interface initialization
+After=jetson_clocks.service
+
+[Service]
+ExecStart=/home/nvidia/can_init.sh
+
+[Install]
+WantedBy=default.target
