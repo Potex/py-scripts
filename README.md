@@ -1,2 +1,2 @@
-# py-scripts
-Python scripts from different projects
+# Scripts
+Scripts from different projects
